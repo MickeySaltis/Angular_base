@@ -1,0 +1,45 @@
+<div class="wrapper mt-5">
+    <div class="section">
+        <div class="container text-center">
+            <h4 class="title">Ajout d'une nouvelle marque.</h4>
+            <div class="row">
+                <!-- Button Cancel add -->
+                <div class="container-fluid my-3">
+                    <a routerLink="/brands" class="btn btn-success">
+                        Annuler l'ajout.
+                    </a>
+                </div>
+
+                <!-- Form -->
+                <form [formGroup]="newBrandForm" (ngSubmit)="onSubmitNewBrandForm()">
+
+                    <div *ngIf="errorMessage" class="alert alert-danger">
+                        {{errorMessage}}
+                    </div>
+
+                    <label for="name">Nom</label>
+
+                        <!-- Error message -->
+                        <div *ngIf="(newBrandForm.controls.name.dirty || newBrandForm.controls.name.touched) && newBrandForm.controls.name.invalid && newBrandForm.controls.name.errors?.required" class="alert alert-danger">
+                            Le nom est obligatoire.
+                        </div>
+
+                    <div class="input-group form-group-no-border">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                <i class="bi bi-info-circle"></i>
+                            </span>
+                        </div>
+
+                        <input type="text" class="form-control" formControlName="name" placeholder="Nom de la marque" [(ngModel)]="brand.name">
+                    </div>
+
+                    <button type="submit" class="btn btn-danger btn-block btn-round mt-4" [disabled]="newBrandForm.invalid">
+                        Ajouter
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

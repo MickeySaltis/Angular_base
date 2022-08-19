@@ -1,0 +1,40 @@
+<div class="wrapper mt-5">
+    <div class="section">
+        <div class="container text-center">
+            <h4 class="title">Administration des marques</h4>
+            <div class="row">
+                <div class="container-fluid my-3">
+                    <a routerLink="/brand/new" class="btn btn-success">
+                        Ajouter une nouvelle marque
+                    </a>  
+                </div>
+                <div class="col-8 mx-auto">
+                    <table class="table table-borderless table-hover table align-middle">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th style="width: 50%" scope="col">Marque</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="">
+                            <tr class="">
+                                <td class="">Citroën</td>
+                                <td>
+                                    <a routerLink="/brand/edit/0" href="" class="btn btn-sm btn-round btn-warning me-2">Modifier</a>
+                                    <button class="btn btn-outline-danger">Supprimer</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="">Renaud</td>
+                                <td>
+                                    <a routerLink="/brand/edit/1" href="" class="btn btn-sm btn-round btn-warning me-2">Modifier</a>
+                                    <button class="btn btn-outline-danger">Supprimer</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

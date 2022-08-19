@@ -1,0 +1,11 @@
+<div class="container text-center my-5">
+    <h2>{{car.model}}</h2>
+        <div class="card my-3 mx-auto" style="width: 18rem;">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">{{car.mark}}</li>
+                <li class="list-group-item">{{car.year}}</li>
+                <li class="list-group-item">{{car.miles}} km</li>
+                <li class="list-group-item">{{car.price}} €</li>
+            </ul>
+            <a class="btn btn-secondary"[routerLink]="carsUrl">Liste des véhicules</a>
+</div>

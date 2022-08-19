@@ -1,0 +1,16 @@
+<!-- Table -->
+
+<td>{{mark}}</td>
+<td>{{model}}</td>
+<td>{{year}}</td>
+<td>{{status}}</td>
+<td>
+    <button class="btn btn-outline-light" (click)="onClickSwitchCarStatus(nextStatus)">
+        Basculer en {{nextStatus}}
+    </button>
+    <a [routerLink]="detailsUrl">
+        <button class="btn btn-outline-light m-2" (click)="onClickSwitchCarStatus(nextStatus)">
+            Détails
+        </button>
+    </a>    
+</td>

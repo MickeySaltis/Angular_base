@@ -1,0 +1,33 @@
+<div class="displayTable mt-5">
+    <div class="displayTableCell text-center">
+        <div class="card container mb-3" style="width: 20rem;">
+            <div class="authBlock card-body">
+                <h3>S'inscrire</h3>
+                <div class="formGroup">
+                    <input type="email" class="formControl" placeholder="Adresse e-mail" #userEmail required />
+                </div>
+                <div class="formGroup">
+                    <input type="password" class="formControl" placeholder="Mot de passe" #userPwd required />
+                </div>
+                <div class="formGroup">
+                    <input type="button" class="btn btnPrimary mt-2" value="S'enregistrer"
+                        (click)="authService.SignUp(userEmail.value, userPwd.value)" />
+                </div>
+                <div class="formGroup">
+                    <span class="or"><span class="orInner">Ou</span></span>
+                </div>
+                <!-- Continue with Google -->
+                <div class="formGroup">
+                    <button type="button" class="btn btn-outline-primary googleBtn mt-1" (click)="authService.GoogleAuth()">
+                        <i class="fab fa-google-plus-g"></i>
+                        Continuer avec Google
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="redirectToLogin mt-4">
+            <span>Vous avez déjà un compte ? 
+                <a class="redirect ms-2" routerLink="/auth"> S'identifier</a></span>
+        </div>
+    </div>
+</div>
