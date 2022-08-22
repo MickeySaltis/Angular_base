@@ -25,4 +25,17 @@
             </tr>
         </tbody>
     </table>
+    <!-- Test table fire cars -->
+    <table classe="table table-bordered table-responsive-sm table-responsive-md table-responsive-lg">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let car of Car">
+                <td>{{car.name}}</td>
+            </tr>
+        </tbody>
+    </table>
 </div>

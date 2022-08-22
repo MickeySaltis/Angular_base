@@ -71,11 +71,23 @@ export class CarService {
     return null;
   }
 
+  /**
+   * Add Car
+   * @param car 
+   */
   AddCar(car: CarModel){
     this.carsRef.push({
       name: car.name,
     });
   }
 
+  /**
+   * List Cars
+   * @returns 
+   */
+  GetCarsList() {
+    this.carsRef = this.db.list('cars-list');
+    return this.carsRef;
+  }
   
 }
