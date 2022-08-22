@@ -11,6 +11,7 @@ export class CarService {
   cars: Array<any>;
 
   carsRef!: AngularFireList<any>;
+  carRef!: AngularFireObject<any>;
 
   constructor(private db: AngularFireDatabase) {
 

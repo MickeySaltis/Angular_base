@@ -15,7 +15,7 @@ export class CarCreatorViewComponent implements OnInit {
   constructor(public carService: CarService, public fb: FormBuilder, public toastr: ToastrService) { }
 
   ngOnInit(): void {
-    this.carForm;
+    this.formCar();
   }
 
   /**
@@ -25,6 +25,9 @@ export class CarCreatorViewComponent implements OnInit {
     this.carForm= this.fb.group({
       name: ['', [Validators.required]],
     });
+  }
+  get name() {
+    return this.carForm.get('name');
   }
 
   /**

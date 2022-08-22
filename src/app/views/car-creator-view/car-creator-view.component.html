@@ -1,27 +1,29 @@
-<div class="pt-3 pb-2 mb-3 border-bottom">
+<div class="pt-3 pb-2 mb-3 border-bottom text-center">
     <h2 class="h2">Ajouter un Véhicule</h2>
 </div>
-<form [formGroup]="carForm" (ngSubmit)="submitCarData()" novalidate>
-    <div class="row">
-        <div class="col-lg-5 col-md-12 col-sm-12">
-            <div class="row">
-                <div class="col-md-12 mb-3">
-                    <label>First name</label>
-                    <input type="text" formControlName="name" class="form-control" required />
-                    <!-- errors-->
-                    <p *ngIf="name.touched && name.invalid" class="error">
-                        <sup>*</sup>Entrez un nom pour le véhicule
-                    </p>
+<div class="container-fluid text-center">
+    <form [formGroup]="carForm" (ngSubmit)="submitCarData()" novalidate>
+        <div class="row">
+            <div class="col-lg-5 col-md-12 col-sm-12 mt-5 mx-auto">
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <label>First name</label>
+                        <input type="text" formControlName="name" class="form-control" required />
+                        <!-- errors-->
+                        <p *ngIf="name?.touched && name?.invalid" class="error">
+                            <sup>*</sup>Entrez un nom pour le véhicule
+                        </p>
+                    </div>
+                </div>
+                <div class="form-group text-right">
+                    <button type="button" class="btn btn-secondary gap-right me-2" (click)="ResetForm()">
+                        Réinitialiser
+                    </button>
+                    <button type="submit" class="btn btn-success" [disabled]="!carForm.valid">
+                        Enregistrer
+                    </button>
                 </div>
             </div>
-            <div class="form-group text-right">
-                <button type="button" class="btn btn-secondary gap-right" (click)="ResetForm()">
-                    Réinitialiser
-                </button>
-                <button type="submit" class="btn btn-success" [disabled]="!carForm.valid">
-                    Enregistrer
-                </button>
-            </div>
         </div>
-    </div>
-</form>
+    </form>
+</div>
