@@ -2,6 +2,31 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.1.0.
 
+## Install Angular CLI
+
+```
+npm install -g @angular/cli
+```
+
+## setup the Angular project
+
+```
+ng new [project]
+```
+
+## Install Bootstrap CSS Framework 
+
+```
+npm install bootstrap
+```
+Go to ```angular.json```
+```
+"styles": [
+            "node_modules/bootstrap/dist/css/bootstrap.min.css",
+            "src/styles.scss"
+          ]
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
